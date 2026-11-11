@@ -1,0 +1,79 @@
+/* css/menu.css */
+
+.menu-hero {
+  padding: 65px 0;
+  text-align: center;
+  background: var(--color-sub);
+}
+
+.menu-hero h1 {
+  font-size: 35px;
+  margin: 10px 0;
+}
+
+.menu-content {
+  text-align: center;
+}
+
+.menu-board {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.menu-board img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+}
+
+.menu-board figcaption {
+  color: var(--color-gray);
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.menu-info {
+  margin-top: 50px;
+  padding: 35px 20px;
+  background: var(--color-sub);
+}
+
+.menu-info h3 {
+  font-size: 24px;
+}
+
+.menu-info .btn {
+  margin-top: 15px;
+}
+
+.snack-section {
+  background: var(--color-sub);
+  text-align: center;
+}
+
+.snack-section img {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .menu-hero {
+    padding: 90px 0;
+  }
+
+  .menu-hero h1 {
+    font-size: 50px;
+  }
+
+  .menu-info {
+    padding: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-hero h1 {
+    font-size: 65px;
+  }
+}

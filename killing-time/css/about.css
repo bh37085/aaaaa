@@ -1,0 +1,99 @@
+/* css/about.css */
+
+.about-hero {
+  padding: 60px 0;
+  background: var(--color-sub);
+}
+
+.about-hero h1 {
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  background: var(--color-sub);
+  min-width: 0;
+}
+
+.feature-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.feature-text {
+  padding: 20px;
+}
+
+.feature-text h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.feature-text p {
+  color: var(--color-gray);
+  margin: 0;
+}
+
+.ott-section {
+  background: var(--color-sub);
+}
+
+.ott-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ott-list li {
+  background: var(--color-main);
+  padding: 20px 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 3px solid var(--color-point);
+}
+
+.ott-notice {
+  color: var(--color-gray);
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+  .about-hero {
+    padding: 90px 0;
+  }
+
+  .about-hero h1 {
+    font-size: 45px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ott-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero h1 {
+    font-size: 58px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .ott-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
