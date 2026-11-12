@@ -1,0 +1,230 @@
+/* css/common.css */
+
+/* 1. 공통 색상 */
+:root {
+  --color-main: #ffffff;
+  --color-point: #ff7a24;
+  --color-text: #222222;
+  --color-gray: #666666;
+  --color-border: #dddddd;
+
+  --font-main: Arial, "Malgun Gothic", sans-serif;
+}
+
+/* 2. 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-main);
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section-title {
+  font-size: 28px;
+  margin: 0 0 15px;
+}
+
+.section-subtitle {
+  color: var(--color-gray);
+  margin-bottom: 35px;
+}
+
+.point {
+  color: var(--color-point);
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  background: var(--color-point);
+  color: var(--color-main);
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* 3. 고정 헤더 */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-main);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+/* 4. 모바일 메뉴 */
+.menu-check {
+  display: none;
+}
+
+.menu-button {
+  display: block;
+  cursor: pointer;
+  font-size: 28px;
+  padding: 5px 10px;
+}
+
+.nav-list {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: var(--color-main);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-list li a {
+  display: block;
+  padding: 15px 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+  color: var(--color-point);
+}
+
+/* 체크박스 선택 시 메뉴 펼치기 */
+.menu-check:checked ~ .nav .nav-list {
+  display: block;
+}
+
+/* 키보드 접근성 */
+.menu-check:focus-visible ~ .menu-button {
+  outline: 2px solid var(--color-point);
+}
+
+/* 5. 푸터 */
+.footer {
+  background: var(--color-text);
+  color: var(--color-main);
+  padding: 35px 0;
+  font-size: 13px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer .footer-point {
+  color: var(--color-point);
+  font-weight: bold;
+}
+
+/* 6. 태블릿 */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .section {
+    padding: 90px 0;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    position: static;
+    width: auto;
+    border: none;
+    gap: 20px;
+  }
+
+  .nav-list li a {
+    padding: 10px 0;
+    border: none;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* 7. PC */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .nav-list {
+    gap: 35px;
+  }
+}

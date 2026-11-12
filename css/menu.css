@@ -1,0 +1,163 @@
+/* css/menu.css */
+
+.menu-hero {
+  padding: 65px 0;
+  text-align: center;
+  background: var(--color-sub);
+}
+
+.menu-hero h1 {
+  font-size: 35px;
+  margin: 10px 0;
+}
+
+.menu-content {
+  text-align: center;
+}
+
+.menu-board {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.menu-board img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+}
+
+.menu-board figcaption {
+  color: var(--color-gray);
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.menu-info {
+  margin-top: 50px;
+  padding: 35px 20px;
+  background: var(--color-sub);
+}
+
+.menu-info h3 {
+  font-size: 24px;
+}
+
+.menu-info .btn {
+  margin-top: 15px;
+}
+
+.snack-section {
+  background: var(--color-sub);
+  text-align: center;
+}
+
+.snack-section img {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .menu-hero {
+    padding: 90px 0;
+  }
+
+  .menu-hero h1 {
+    font-size: 50px;
+  }
+
+  .menu-info {
+    padding: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-hero h1 {
+    font-size: 65px;
+  }
+}
+
+/* 스낵바 영역 */
+.snack-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.snack-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.snack-section p {
+  margin-bottom: 35px;
+  color: var(--color-gray);
+}
+
+/* 슬라이더 */
+.snack-slider {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* 라디오 버튼 숨기기 */
+.snack-slider input {
+  display: none;
+}
+
+/* 이미지 영역 */
+.snack-images {
+  width: 100%;
+  overflow: hidden;
+}
+
+.snack-image {
+  display: none;
+  width: 100%;
+}
+
+.snack-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* 선택한 사진 표시 */
+#snack1:checked ~ .snack-images .snack-image1,
+#snack2:checked ~ .snack-images .snack-image2,
+#snack3:checked ~ .snack-images .snack-image3 {
+  display: block;
+}
+
+/* 다음 버튼 */
+.snack-controls label {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+
+  width: 45px;
+  height: 45px;
+
+  background-color: var(--color-orange);
+  color: white;
+
+  border-radius: 50%;
+  font-size: 28px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+/* 버튼 표시 */
+#snack1:checked ~ .snack-controls .next1,
+#snack2:checked ~ .snack-controls .next2,
+#snack3:checked ~ .snack-controls .next3 {
+  display: flex;
+}

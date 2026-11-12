@@ -1,0 +1,377 @@
+/* ========================================
+   1. 메인 비주얼
+======================================== */
+
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--color-sub);
+}
+
+.hero-slider {
+  position: relative;
+
+  width: 100%;
+  height: 75vh;
+  min-height: 400px;
+  max-height: 900px;
+
+  overflow: hidden;
+  background: var(--color-text);
+}
+
+/* 메인 이미지 공통 */
+.hero-slider .slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* 첫 번째 이미지 */
+.slide-one {
+  animation-name: firstSlide;
+}
+
+/* 두 번째 이미지 */
+.slide-two {
+  animation-name: secondSlide;
+}
+
+/* 세 번째 이미지 */
+.slide-three {
+  animation-name: thirdSlide;
+}
+
+/* 첫 번째 슬라이드 */
+@keyframes firstSlide {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  28% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 두 번째 슬라이드 */
+@keyframes secondSlide {
+  0%,
+  30% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  68% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 세 번째 슬라이드 */
+@keyframes thirdSlide {
+  0%,
+  63% {
+    opacity: 0;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  93% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   2. 스크롤 시 이미지 축소 효과
+   PC 브라우저 지원 시 작동
+======================================== */
+
+@media (min-width: 1024px) {
+  .hero-slider {
+    animation: shrinkOnScroll linear both;
+
+    animation-timeline: scroll(root);
+    animation-range: 0px 500px;
+  }
+
+  @keyframes shrinkOnScroll {
+    from {
+      transform: scale(1);
+      border-radius: 0;
+    }
+
+    to {
+      transform: scale(0.85);
+      border-radius: 20px;
+    }
+  }
+}
+
+/* ========================================
+   3. 인스타그램 영역
+======================================== */
+
+.instagram {
+  padding: 70px 0;
+  text-align: center;
+  background: var(--color-main);
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.instagram-grid img:last-child {
+  display: none;
+}
+
+.instagram-btn {
+  margin-top: 30px;
+}
+
+/* ========================================
+   4. 가게 소개 영역
+======================================== */
+
+.home-about {
+  padding: 70px 0;
+  background: var(--color-sub);
+}
+
+.home-about-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.home-about-inner img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ========================================
+   5. 태블릿
+======================================== */
+
+@media (min-width: 768px) {
+  .hero-slider {
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .instagram {
+    padding: 90px 0;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .instagram-grid img:last-child {
+    display: block;
+  }
+
+  .home-about-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home-about-inner > * {
+    width: 50%;
+    min-width: 0;
+  }
+}
+
+/* ========================================
+   6. PC
+======================================== */
+
+@media (min-width: 1024px) {
+  .hero-slider {
+    height: 100vh;
+    min-height: 650px;
+    max-height: 1000px;
+  }
+
+  .instagram {
+    padding: 120px 0;
+  }
+
+  .instagram-grid {
+    gap: 30px;
+  }
+
+  .home-about {
+    padding: 120px 0;
+  }
+
+  .home-about-inner {
+    gap: 60px;
+  }
+}
+
+/* ========================================
+   7. 모바일 가로 화면
+======================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero-slider {
+    height: 100vh;
+    min-height: 300px;
+  }
+}
+
+/* ========================================
+   8. 움직임 최소화 설정 사용자 배려
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slider .slide {
+    animation: none;
+  }
+
+  .hero-slider .slide-one {
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   VIDEO + MENU LAYOUT
+======================================== */
+
+.video-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 40px;
+}
+
+/* 왼쪽 영상 */
+.video-wrap {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* 인스타그램 영상 */
+.video-wrap .instagram-media {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+}
+
+/* 오른쪽 메뉴 */
+.video-menu {
+  width: 100%;
+  text-align: center;
+}
+
+.menu-image-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.menu-image-link:hover img {
+  transform: scale(1.03);
+}
+
+.video-menu p {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .video-content {
+    gap: 20px;
+  }
+
+  .video-menu h3 {
+    font-size: 24px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+  .video-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .video-wrap {
+    max-width: 400px;
+  }
+
+  .video-menu h3 {
+    font-size: 24px;
+  }
+}

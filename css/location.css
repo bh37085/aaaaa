@@ -1,0 +1,70 @@
+/* css/location.css */
+
+.location-hero {
+  padding: 60px 0;
+  background: var(--color-sub);
+}
+
+.location-hero h1 {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.location-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.location-image,
+.location-info {
+  width: 100%;
+  min-width: 0;
+}
+
+.location-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.location-info address {
+  font-style: normal;
+  font-size: 18px;
+  margin: 25px 0;
+}
+
+.location-contact {
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .location-hero {
+    padding: 90px 0;
+  }
+
+  .location-hero h1 {
+    font-size: 55px;
+  }
+
+  .location-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .location-image,
+  .location-info {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .location-content {
+    gap: 70px;
+  }
+
+  .location-hero h1 {
+    font-size: 65px;
+  }
+}

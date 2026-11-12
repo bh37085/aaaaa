@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴 | 킬링타임 OTT카페 월성센터</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo.jpg" alt="킬링타임 OTT카페 로고" />
+        </a>
+        <input type="checkbox" id="menu-check" class="menu-check" />
+        <label for="menu-check" class="menu-button" aria-label="메뉴 열기"
+          >☰</label
+        >
+        <nav class="nav" aria-label="주 메뉴">
+          <ul class="nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="location.html">LOCATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="menu-hero">
+        <div class="container">
+          <p class="point">KILLING TIME</p>
+          <h1>MENU & PRICE</h1>
+          <p>Enjoy Your Time</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container menu-content">
+          <h2 class="section-title">MENU BOARD</h2>
+          <p class="section-subtitle">메뉴와 이용 요금을 확인해 보세요.</p>
+
+          <figure class="menu-board">
+            <a href="images/menu.jpg" target="_blank" rel="noopener noreferrer">
+              <img
+                src="images/menu.jpg"
+                alt="킬링타임 OTT카페 실제 메뉴판 및 이용 요금"
+              />
+            </a>
+            <figcaption>
+              메뉴판을 클릭하면 원본 이미지를 확인할 수 있습니다.
+            </figcaption>
+          </figure>
+
+          <div class="menu-info">
+            <h3>DRINK & SNACK</h3>
+            <p>영화와 게임을 즐기며 다양한 음료와 간식을 함께 즐겨보세요.</p>
+            <a href="contact.html" class="btn">MENU 문의하기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="snack-section">
+        <h2>SNACK BAR</h2>
+        <p>즐거운 시간을 위한 다양한 간식</p>
+
+        <div class="snack-slider">
+          <!-- 사진 선택 -->
+          <input type="radio" name="snack" id="snack1" checked />
+          <input type="radio" name="snack" id="snack2" />
+          <input type="radio" name="snack" id="snack3" />
+
+          <!-- 사진 영역 -->
+          <div class="snack-images">
+            <div class="snack-image snack-image1">
+              <img src="images/snack.jpg" alt="스낵바 매장 내부" />
+            </div>
+
+            <div class="snack-image snack-image2">
+              <img src="images/snack1.jpg" alt="스낵바 간식 진열" />
+            </div>
+
+            <div class="snack-image snack-image3">
+              <img src="images/snack2.jpg" alt="스낵바 음료와 간식" />
+            </div>
+          </div>
+
+          <!-- 다음 사진 버튼 -->
+          <div class="snack-controls">
+            <label for="snack2" class="next1">&gt;</label>
+            <label for="snack3" class="next2">&gt;</label>
+            <label for="snack1" class="next3">&gt;</label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-point">KILLING TIME OTT CAFE</p>
+          <p>Your Private Playground</p>
+        </div>
+        <div>
+          <p>대구 달서구 상원로 192, 3층</p>
+          <p>Instagram @ott_killingtime</p>
+          <p>OPEN 24 HOURS · EVERYDAY</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
